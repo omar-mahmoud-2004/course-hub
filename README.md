@@ -193,7 +193,6 @@ When database seeders are executed (`php artisan migrate --seed`), ready-to-test
 | Role | Name | Email | Password |
 |---|---|---|---|
 | **Admin** | Admin | `admin@admin.com` | `12345678` |
-| **Teacher** | Omar Mahmoud | `omar@coursehub.com` | `12345678` |
 | **Teacher** | Teacher | `teacher@teacher.com` | `12345678` |
 | **Student** | Student | `student@student.com` | `12345678` |
 

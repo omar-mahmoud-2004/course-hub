@@ -13,7 +13,7 @@ class AdminUserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@admin.com'], // الإيميل
             [
-                'name'     => 'Omar El-Ghandour',
+                'name'     => 'Admin',
                 'password' => Hash::make('12345678'), // كلمة المرور
                 'role'     => 'admin',
             ]

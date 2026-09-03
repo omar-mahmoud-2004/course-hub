@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Dashboard - CourseHub')</title>
+
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-bs-theme', savedTheme);
+        })();
+    </script>
 
     <!-- Bootstrap المحلي -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
+        :root {
+            --bs-body-bg: #f8fafc;
+            --bs-body-color: #1e293b;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+        }
+
+        [data-bs-theme="dark"] {
+            --bs-body-bg: #0f172a !important;
+            --bs-body-color: #f1f5f9 !important;
+            --bs-border-color: #334155 !important;
+            --card-bg: #1e293b !important;
+            --card-border: #334155 !important;
+        }
+
         body {
             background-color: var(--bs-body-bg, #f8fafc);
             color: var(--bs-body-color, #212529);
@@ -27,7 +49,7 @@
         .admin-navbar {
             background-color: var(--bs-body-bg) !important;
             border-bottom: 1px solid var(--bs-border-color) !important;
-            transition: background-color 0.25s ease;
+            transition: background-color 0.25s ease, border-color 0.25s ease;
         }
 
         .footer-dark {
@@ -56,6 +78,115 @@
         }
         #themeToggleBtn:hover {
             transform: scale(1.08);
+        }
+
+        /* Dark Mode Overrides */
+        [data-bs-theme="dark"] body {
+            background-color: #0f172a !important;
+            color: #f1f5f9 !important;
+        }
+
+        [data-bs-theme="dark"] .admin-navbar {
+            background-color: #1e293b !important;
+            border-bottom-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .card,
+        [data-bs-theme="dark"] .bg-white {
+            background-color: #1e293b !important;
+            color: #f1f5f9 !important;
+            border: 1px solid #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .text-dark {
+            color: #f1f5f9 !important;
+        }
+
+        [data-bs-theme="dark"] .text-secondary,
+        [data-bs-theme="dark"] .text-muted {
+            color: #94a3b8 !important;
+        }
+
+        [data-bs-theme="dark"] .table {
+            color: #f1f5f9 !important;
+            border-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .table thead,
+        [data-bs-theme="dark"] .table-light,
+        [data-bs-theme="dark"] .table-light th,
+        [data-bs-theme="dark"] .table > :not(caption) > * > * {
+            background-color: #1e293b !important;
+            color: #f1f5f9 !important;
+            border-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .table-hover > tbody > tr:hover > * {
+            background-color: #27354f !important;
+            color: #ffffff !important;
+        }
+
+        [data-bs-theme="dark"] .form-control,
+        [data-bs-theme="dark"] .form-select {
+            background-color: #0f172a !important;
+            color: #f1f5f9 !important;
+            border-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .form-control:focus,
+        [data-bs-theme="dark"] .form-select:focus {
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            border-color: #3b82f6 !important;
+        }
+
+        [data-bs-theme="dark"] .form-control::placeholder {
+            color: #64748b !important;
+        }
+
+        [data-bs-theme="dark"] .modal-content {
+            background-color: #1e293b !important;
+            color: #f1f5f9 !important;
+            border-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .modal-header,
+        [data-bs-theme="dark"] .modal-footer {
+            border-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+
+        [data-bs-theme="dark"] .dropdown-menu {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+
+        [data-bs-theme="dark"] .dropdown-item {
+            color: #f1f5f9 !important;
+        }
+
+        [data-bs-theme="dark"] .dropdown-item:hover {
+            background-color: #27354f !important;
+        }
+
+        [data-bs-theme="dark"] .pagination .page-link {
+            background-color: #1e293b;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+
+        [data-bs-theme="dark"] .pagination .page-item.active .page-link {
+            background-color: #2563eb;
+            border-color: #2563eb;
+            color: #ffffff;
+        }
+
+        [data-bs-theme="dark"] .footer-dark {
+            background-color: #0b1120 !important;
+            border-top: 1px solid #1e293b;
         }
     </style>
 </head>

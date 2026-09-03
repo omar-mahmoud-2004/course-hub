@@ -38,7 +38,7 @@
     <div class="row g-4 mb-5">
         <!-- Students -->
         <div class="col-md-4 col-sm-6">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <span class="text-secondary fw-semibold">Students</span>
@@ -53,7 +53,7 @@
 
         <!-- Teachers -->
         <div class="col-md-4 col-sm-6">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <span class="text-secondary fw-semibold">Teachers</span>
@@ -68,7 +68,7 @@
 
         <!-- Total Courses -->
         <div class="col-md-4 col-sm-6">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <span class="text-secondary fw-semibold">Total Courses</span>
@@ -83,7 +83,7 @@
 
         <!-- Enrollments -->
         <div class="col-md-4 col-sm-6">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <span class="text-secondary fw-semibold">Enrollments</span>
@@ -98,7 +98,7 @@
 
         <!-- Categories -->
         <div class="col-md-4 col-sm-6">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <span class="text-secondary fw-semibold">Categories</span>
@@ -113,7 +113,7 @@
 
         <!-- Reviews -->
         <div class="col-md-4 col-sm-6">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <span class="text-secondary fw-semibold">Reviews</span>
@@ -131,9 +131,9 @@
     <div class="row g-4">
         <!-- Recent Users -->
         <div class="col-lg-6">
-            <div class="card border-0 shadow-sm rounded-4 bg-white p-4 h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-people-fill text-primary me-2"></i>Recent Users</h5>
+                    <h5 class="fw-bold mb-0"><i class="bi bi-people-fill text-primary me-2"></i>Recent Users</h5>
                     <a href="{{ route('admin.users.index') }}" class="text-decoration-none small fw-semibold text-primary">View All &rarr;</a>
                 </div>
                 <div class="table-responsive">
@@ -148,7 +148,7 @@
                         <tbody>
                             @forelse ($recent_users as $user)
                                 <tr>
-                                    <td class="fw-semibold text-dark">{{ $user->name }}</td>
+                                    <td class="fw-semibold">{{ $user->name }}</td>
                                     <td><span class="text-secondary small">{{ $user->email }}</span></td>
                                     <td>
                                         <span class="badge rounded-pill px-3 py-2 {{ $user->role === 'admin' ? 'bg-danger' : ($user->role === 'teacher' ? 'bg-success' : 'bg-primary') }}">
@@ -169,9 +169,9 @@
 
         <!-- Recent Courses -->
         <div class="col-lg-6">
-            <div class="card border-0 shadow-sm rounded-4 bg-white p-4 h-100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-journal-bookmark-fill text-primary me-2"></i>Recent Courses</h5>
+                    <h5 class="fw-bold mb-0"><i class="bi bi-journal-bookmark-fill text-primary me-2"></i>Recent Courses</h5>
                     <a href="{{ route('admin.courses.index') }}" class="text-decoration-none small fw-semibold text-primary">View All &rarr;</a>
                 </div>
                 <div class="table-responsive">
@@ -186,7 +186,7 @@
                         <tbody>
                             @forelse ($recent_courses as $course)
                                 <tr>
-                                    <td class="fw-semibold text-dark">{{ $course->title ?? $course->name }}</td>
+                                    <td class="fw-semibold">{{ $course->title ?? $course->name }}</td>
                                     <td>
                                         <span class="text-secondary small">{{ $course->teacher->name ?? $course->teacher_name ?? 'N/A' }}</span>
                                     </td>

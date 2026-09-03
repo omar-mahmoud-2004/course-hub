@@ -50,26 +50,26 @@ class CourseHubSampleSeeder extends Seeder
         // 3. Seed Professional Instructors
         $teachers = [
             [
-                'name' => 'Omar Mahmoud',
+                'name' => 'Omar El-Ghandour',
                 'email' => 'omar.instructor@coursehub.com',
                 'password' => Hash::make('password123'),
                 'role' => 'teacher',
             ],
             [
-                'name' => 'Dr. Alex Rivera',
-                'email' => 'alex.rivera@coursehub.com',
+                'name' => 'Aisha Hamed',
+                'email' => 'aisha.hamed@coursehub.com',
                 'password' => Hash::make('password123'),
                 'role' => 'teacher',
             ],
             [
-                'name' => 'Sarah Jenkins',
-                'email' => 'sarah.jenkins@coursehub.com',
+                'name' => 'Mariam Abdelrahman',
+                'email' => 'mariam.abdelrahman@coursehub.com',
                 'password' => Hash::make('password123'),
                 'role' => 'teacher',
             ],
             [
-                'name' => 'Michael Chen',
-                'email' => 'michael.chen@coursehub.com',
+                'name' => 'Hanan',
+                'email' => 'hanan@coursehub.com',
                 'password' => Hash::make('password123'),
                 'role' => 'teacher',
             ],
@@ -83,9 +83,9 @@ class CourseHubSampleSeeder extends Seeder
 
         // 4. Seed Test Students for Reviews & Enrollments
         $students = [
-            ['name' => 'John Doe', 'email' => 'john@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
-            ['name' => 'Emily Watson', 'email' => 'emily@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
-            ['name' => 'Liam Brown', 'email' => 'liam@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
+            ['name' => 'Shahd Tarek', 'email' => 'shahd.tarek@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
+            ['name' => 'Mariam Abdelrahman', 'email' => 'mariam.student@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
+            ['name' => 'Hanan', 'email' => 'hanan.student@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
         ];
 
         $studentIds = [];
@@ -101,7 +101,7 @@ class CourseHubSampleSeeder extends Seeder
                 'description' => 'Master modern full-stack web applications from scratch. Learn Laravel 12 backend architecture, REST APIs, Vue.js components, authentication, and database optimization.',
                 'price' => 49.99,
                 'category_id' => $catMap['Web Development'],
-                'teacher_id' => $teacherMap['Omar Mahmoud'],
+                'teacher_id' => $teacherMap['Omar El-Ghandour'],
                 'image' => 'upload/course_fullstack_laravel.jpg',
                 'lessons' => [
                     ['title' => '1. Course Orientation & Environment Setup', 'description' => 'Setup PHP, Composer, Node.js, and create a brand new Laravel application.', 'video_url' => 'https://www.youtube.com/watch?v=MYyJ4PuL4pY', 'duration' => '18 mins'],
@@ -122,7 +122,7 @@ class CourseHubSampleSeeder extends Seeder
                 'description' => 'A comprehensive guide to data analysis and predictive modeling. Covers NumPy, Pandas, Matplotlib, Scikit-Learn, and Deep Learning neural networks.',
                 'price' => 69.99,
                 'category_id' => $catMap['Data Science & AI'],
-                'teacher_id' => $teacherMap['Dr. Alex Rivera'],
+                'teacher_id' => $teacherMap['Aisha Hamed'],
                 'image' => 'upload/course_data_science.jpg',
                 'lessons' => [
                     ['title' => '1. Python Fundamentals for Data Analysis', 'description' => 'Core Python data structures, list comprehensions, and data wrangling tools.', 'video_url' => 'https://www.youtube.com/watch?v=LHBE6Q9XlzI', 'duration' => '24 mins'],
@@ -134,7 +134,7 @@ class CourseHubSampleSeeder extends Seeder
                     ['question' => 'What is the primary object structure used in Pandas?', 'answer' => 'dataframe', 'correct_answer' => 'dataframe'],
                 ],
                 'reviews' => [
-                    ['student_index' => 1, 'rating' => 5, 'comment' => 'Dr. Rivera simplifies the hardest ML algorithms into intuitive steps. 10/10!'],
+                    ['student_index' => 1, 'rating' => 5, 'comment' => 'Dr. Aisha Hamed simplifies the hardest ML algorithms into intuitive steps. 10/10!'],
                     ['student_index' => 2, 'rating' => 4, 'comment' => 'Great real-world datasets and comprehensive projects.'],
                 ]
             ],
@@ -143,7 +143,7 @@ class CourseHubSampleSeeder extends Seeder
                 'description' => 'Build high-performance, responsive native mobile applications for iOS and Android using Flutter 3, Dart, state management with Bloc, and Firebase cloud integrations.',
                 'price' => 39.99,
                 'category_id' => $catMap['Mobile App Development'],
-                'teacher_id' => $teacherMap['Omar Mahmoud'],
+                'teacher_id' => $teacherMap['Omar El-Ghandour'],
                 'image' => 'upload/course_flutter.jpg',
                 'lessons' => [
                     ['title' => '1. Introduction to Dart Language & Flutter Widgets', 'description' => 'Understanding Stateless and Stateful widgets, layout building, and hot reload.', 'video_url' => 'https://www.youtube.com/watch?v=1ukSR1GRtMU', 'duration' => '22 mins'],
@@ -162,7 +162,7 @@ class CourseHubSampleSeeder extends Seeder
                 'description' => 'From wireframes to interactive high-fidelity prototypes. Learn user research, typography, color harmony, responsive layout grids, and scalable design systems.',
                 'price' => 29.99,
                 'category_id' => $catMap['UI / UX Design'],
-                'teacher_id' => $teacherMap['Michael Chen'],
+                'teacher_id' => $teacherMap['Hanan'],
                 'image' => 'upload/course_uiux_figma.jpg',
                 'lessons' => [
                     ['title' => '1. Design Fundamentals: Typography & Visual Hierarchy', 'description' => 'Creating contrast, optical balance, and choosing font pairings for web and mobile.', 'video_url' => 'https://www.youtube.com/watch?v=FTFaQWZBqQ8', 'duration' => '20 mins'],
@@ -181,7 +181,7 @@ class CourseHubSampleSeeder extends Seeder
                 'description' => 'Deploy enterprise scalable cloud architectures on Amazon Web Services. Containerize applications with Docker, orchestrate with Kubernetes, and automate deployments with CI/CD.',
                 'price' => 79.99,
                 'category_id' => $catMap['Cloud & DevOps'],
-                'teacher_id' => $teacherMap['Sarah Jenkins'],
+                'teacher_id' => $teacherMap['Mariam Abdelrahman'],
                 'image' => 'upload/course_devops_aws.jpg',
                 'lessons' => [
                     ['title' => '1. AWS Core Infrastructure: EC2, S3 & VPCs', 'description' => 'Setting up compute instances, scalable object storage, and secure virtual networks.', 'video_url' => 'https://www.youtube.com/watch?v=ulprqHHWlng', 'duration' => '30 mins'],
@@ -200,7 +200,7 @@ class CourseHubSampleSeeder extends Seeder
                 'description' => 'Master penetration testing, vulnerability assessment, network security, and defense tactics. Understand the OWASP Top 10 vulnerabilities and ethical hacking toolsets.',
                 'price' => 0.00,
                 'category_id' => $catMap['Cyber Security'],
-                'teacher_id' => $teacherMap['Dr. Alex Rivera'],
+                'teacher_id' => $teacherMap['Aisha Hamed'],
                 'image' => 'upload/course_cyber_security.jpg',
                 'lessons' => [
                     ['title' => '1. Introduction to Ethical Hacking & Kali Linux', 'description' => 'Security mindset, legal frameworks, and essential networking utilities.', 'video_url' => 'https://www.youtube.com/watch?v=3Kq1MIfTWCE', 'duration' => '25 mins'],

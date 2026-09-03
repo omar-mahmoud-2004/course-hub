@@ -41,7 +41,7 @@
     @endif
 
     <!-- Reviews Table Card -->
-    <div class="card border-0 shadow-sm rounded-4 bg-white p-4">
+    <div class="card border-0 shadow-sm rounded-4 p-4">
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
             <h5 class="fw-bold mb-0">
                 <i class="bi bi-star-half text-warning me-2"></i>All Reviews ({{ $reviews->total() }})

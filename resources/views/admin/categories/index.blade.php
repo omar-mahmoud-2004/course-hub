@@ -54,7 +54,7 @@
     <div class="row g-4">
         <!-- Add Category Form -->
         <div class="col-lg-4">
-            <div class="card border-0 shadow-sm rounded-4 bg-white p-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4">
                 <h5 class="fw-bold mb-3"><i class="bi bi-plus-circle text-primary me-2"></i>Add New Category</h5>
                 <form method="POST" action="{{ route('admin.categories.store') }}">
                     @csrf
@@ -71,7 +71,7 @@
 
         <!-- Categories Table -->
         <div class="col-lg-8">
-            <div class="card border-0 shadow-sm rounded-4 bg-white p-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4">
                 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
                     <h5 class="fw-bold mb-0">
                         <i class="bi bi-tags-fill text-primary me-2"></i>All Categories ({{ $categories->count() }})

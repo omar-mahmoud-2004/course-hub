@@ -51,15 +51,15 @@
     <div class="row g-3 mb-4">
         <div class="col-6 col-md-3">
             <a href="{{ route('admin.users.index') }}" class="text-decoration-none">
-                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white text-center">
+                <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
                     <small class="text-muted fw-bold">All Users</small>
-                    <h4 class="fw-bold text-dark mb-0">{{ $rolesCount['all'] }}</h4>
+                    <h4 class="fw-bold mb-0">{{ $rolesCount['all'] }}</h4>
                 </div>
             </a>
         </div>
         <div class="col-6 col-md-3">
             <a href="{{ route('admin.users.index', ['role' => 'student']) }}" class="text-decoration-none">
-                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white text-center">
+                <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
                     <small class="text-primary fw-bold">Students</small>
                     <h4 class="fw-bold text-primary mb-0">{{ $rolesCount['students'] }}</h4>
                 </div>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-6 col-md-3">
             <a href="{{ route('admin.users.index', ['role' => 'teacher']) }}" class="text-decoration-none">
-                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white text-center">
+                <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
                     <small class="text-success fw-bold">Teachers</small>
                     <h4 class="fw-bold text-success mb-0">{{ $rolesCount['teachers'] }}</h4>
                 </div>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-6 col-md-3">
             <a href="{{ route('admin.users.index', ['role' => 'admin']) }}" class="text-decoration-none">
-                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white text-center">
+                <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
                     <small class="text-danger fw-bold">Admins</small>
                     <h4 class="fw-bold text-danger mb-0">{{ $rolesCount['admins'] }}</h4>
                 </div>
@@ -84,7 +84,7 @@
     </div>
 
     <!-- Users Table Card -->
-    <div class="card border-0 shadow-sm rounded-4 bg-white p-4">
+    <div class="card border-0 shadow-sm rounded-4 p-4">
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
             <h5 class="fw-bold mb-0">
                 <i class="bi bi-people-fill text-primary me-2"></i>Users List

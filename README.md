@@ -186,13 +186,16 @@ http://127.0.0.1:8000
 
 ---
 
-## 🔑 Default Administrator Credentials
+## 🔑 Default Demo Accounts & Credentials
 
-When database seeders are executed (`php artisan migrate --seed`), an admin account is ready to use:
+When database seeders are executed (`php artisan migrate --seed`), ready-to-test accounts for every role are available:
 
-| Role | Email | Password |
-|---|---|---|
-| **Admin** | `admin@admin.com` | `12345678` |
+| Role | Name | Email | Password |
+|---|---|---|---|
+| **Admin** | Admin | `admin@admin.com` | `12345678` |
+| **Teacher** | Omar Mahmoud | `omar@coursehub.com` | `12345678` |
+| **Teacher** | Teacher | `teacher@teacher.com` | `12345678` |
+| **Student** | Student | `student@student.com` | `12345678` |
 
 ---
 

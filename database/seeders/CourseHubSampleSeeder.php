@@ -50,6 +50,12 @@ class CourseHubSampleSeeder extends Seeder
         // 3. Seed Professional Instructors
         $teachers = [
             [
+                'name' => 'Omar Mahmoud',
+                'email' => 'omar.mahmoud@coursehub.com',
+                'password' => Hash::make('password123'),
+                'role' => 'teacher',
+            ],
+            [
                 'name' => 'Omar El-Ghandour',
                 'email' => 'omar.instructor@coursehub.com',
                 'password' => Hash::make('password123'),
@@ -64,6 +70,12 @@ class CourseHubSampleSeeder extends Seeder
             [
                 'name' => 'Mariam Abdelrahman',
                 'email' => 'mariam.abdelrahman@coursehub.com',
+                'password' => Hash::make('password123'),
+                'role' => 'teacher',
+            ],
+            [
+                'name' => 'Teacher',
+                'email' => 'teacher@teacher.com',
                 'password' => Hash::make('password123'),
                 'role' => 'teacher',
             ],
@@ -83,6 +95,7 @@ class CourseHubSampleSeeder extends Seeder
 
         // 4. Seed Test Students for Reviews & Enrollments
         $students = [
+            ['name' => 'Student', 'email' => 'student@student.com', 'password' => Hash::make('password123'), 'role' => 'student'],
             ['name' => 'Shahd Tarek', 'email' => 'shahd.tarek@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
             ['name' => 'Mariam Abdelrahman', 'email' => 'mariam.student@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],
             ['name' => 'Hanan', 'email' => 'hanan.student@example.com', 'password' => Hash::make('password123'), 'role' => 'student'],

@@ -12,6 +12,27 @@
 
 ---
 
+## 📸 Screenshots & Application Showcase
+
+<p align="center">
+  <img src="screenshots/home-page.png" alt="CourseHub Home Page & Dark Mode" width="100%">
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <strong>🛡️ Admin Dashboard (Dark Mode Overview)</strong><br><br>
+      <img src="screenshots/admin-dashboard.png" alt="Admin Dashboard" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <strong>⭐ Course Details, Reviews & Student Feedback</strong><br><br>
+      <img src="screenshots/course-details.png" alt="Course Details & Reviews" width="100%">
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🌟 Key Features & Capabilities
 
 ### 👨‍🎓 Student Experience

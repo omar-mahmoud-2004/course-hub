@@ -1,5 +1,5 @@
 <?php
-// 1. بدء الجلسة بأمان
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

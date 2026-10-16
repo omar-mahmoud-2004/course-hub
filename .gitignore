@@ -31,3 +31,5 @@ Thumbs.db
 *.rar
 *.tar.gz
 *.7z
+/graphify-out/
+/public/graph3d.html
